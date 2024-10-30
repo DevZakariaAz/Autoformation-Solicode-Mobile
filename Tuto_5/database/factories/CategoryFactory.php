@@ -13,17 +13,6 @@ class CategoryFactory extends Factory
     {
         return [
             'name' => $this->faker->word,
-            'description' => $this->faker->paragraph,
         ];
     }
-
-    public function active(): Factory
-    {
-        return $this->state(function (array $attributes) {
-            return [
-                'is_active' => true,
-            ];
-        });
-    }
 }
-
