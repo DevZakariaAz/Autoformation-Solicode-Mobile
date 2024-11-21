@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\Auth;
 {
     public function showLoginForm()
     {
+        if(auth::check()){
+            return redirect()->route('dashboard');
+        }
         return view('auth.login');
     }
 
