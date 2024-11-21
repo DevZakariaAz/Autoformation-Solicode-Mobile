@@ -12,7 +12,7 @@
         <input type="text" name="title" value="{{$article['title']}}" required>
         <label for="content">Contenu :</label>
         <input name="content" value="{{$article['content']}}" type="text" required>
-        <button type="submit">Edit</button>
+        <button type="submit" class="btn btn-success" >Edit</button>
     </form>
 
 

@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
     <h1> Créer un nouvel article</h1>
     <form action="/articles" method="POST">
@@ -11,7 +9,7 @@
         <input type="text" name="title" value="" required>
         <label for="content">Contenu :</label>
         <input name="content"  type="text" required>
-        <button type="submit">Create</button>
+        <button type="submit" class="btn btn-success">Create</button>
     </form>
 <?php $__env->stopSection(); ?>
 

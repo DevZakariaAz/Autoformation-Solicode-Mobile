@@ -2802,3 +2802,32 @@ Message: Test
 #60 C:\\Autoformation-Solicode-Mobile\\Laravel\\Tuto_7\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\Autoformatio...')
 #61 {main}
 "} 
+[2024-11-21 12:15:35] local.ERROR: Command "route:liste" is not defined.
+
+Did you mean one of these?
+    channel:list
+    event:list
+    make:listener
+    queue:listen
+    route:cache
+    route:clear
+    route:list
+    schedule:list {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"route:liste\" is not defined.
+
+Did you mean one of these?
+    channel:list
+    event:list
+    make:listener
+    queue:listen
+    route:cache
+    route:clear
+    route:list
+    schedule:list at C:\\Autoformation-Solicode-Mobile\\Laravel\\Tuto_8\\vendor\\symfony\\console\\Application.php:702)
+[stacktrace]
+#0 C:\\Autoformation-Solicode-Mobile\\Laravel\\Tuto_8\\vendor\\symfony\\console\\Application.php(258): Symfony\\Component\\Console\\Application->find('route:liste')
+#1 C:\\Autoformation-Solicode-Mobile\\Laravel\\Tuto_8\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Autoformation-Solicode-Mobile\\Laravel\\Tuto_8\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(197): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Autoformation-Solicode-Mobile\\Laravel\\Tuto_8\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Autoformation-Solicode-Mobile\\Laravel\\Tuto_8\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#5 {main}
+"} 

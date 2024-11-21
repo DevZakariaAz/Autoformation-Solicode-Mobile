@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
     <h2>Liste des Articles</h2>
     <?php $__currentLoopData = $articles; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $article): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

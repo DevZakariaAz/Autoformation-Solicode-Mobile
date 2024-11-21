@@ -1,7 +1,13 @@
 <?php
 use App\Http\Controllers\ArticleController;
+use App\Http\Middleware\CheckRole;
 
-Route::resource('articles', ArticleController::class);
-// Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('articles.show');
-// Route::get('/articles/edit/{id}', [ArticleController::class, 'edit'])->name('articles.edit');
-// Route::get('/articles/create/', [ArticleController::class, 'create'])->name('articles.create');
+// Route::get('/dashboard', [DashboardController::class, 'index'])->middleware([CheckRole::class]);
+
+// Route::get('/home', function (){
+//     return "Home page";
+// })->name('home');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+Route::get('/login', function (){
+    return "login page";
+})->name('login');

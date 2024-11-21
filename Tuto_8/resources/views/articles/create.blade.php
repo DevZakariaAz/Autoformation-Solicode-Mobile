@@ -11,6 +11,6 @@
         <input type="text" name="title" value="" required>
         <label for="content">Contenu :</label>
         <input name="content"  type="text" required>
-        <button type="submit">Create</button>
+        <button type="submit" class="btn btn-success">Create</button>
     </form>
 @endsection
