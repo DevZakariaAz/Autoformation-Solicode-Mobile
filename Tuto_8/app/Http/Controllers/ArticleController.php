@@ -7,8 +7,9 @@ use App\Models\Article;
 class ArticleController extends Controller
 {
     public function index() {
-    $articles = Article::all();
-    return view('articles.index', compact('articles'));
+        // Paginate the articles, showing 10 articles per page
+        $articles = Article::paginate(10);
+        return view('articles.index', compact('articles'));
     }
 
     public function create() {
@@ -23,6 +24,7 @@ class ArticleController extends Controller
         $validated = $request->validate([
             'title' => 'required|max:255',
             'content' => 'required',
+            'categorie' => 'nullable|string|max:255', // Validate `categorie`
         ]);
 
         Article::create($validated);
@@ -37,11 +39,13 @@ class ArticleController extends Controller
         $validated = $request->validate([
             'title' => 'required|max:255',
             'content' => 'required',
+            'categorie' => 'nullable|string|max:255', // Validate `categorie`
         ]);
 
         $article->update($validated);
         return redirect()->route('articles.index')->with('success', 'Article mis à jour avec succès.');
     }
+
 
     public function destroy(Article $article) {
         $article->delete();

@@ -1,7 +1,7 @@
 <div class="article-card">
     <li>
-        <a href="/articles/<?php echo e($article['id']); ?>">
-            <?php echo e($article["id"]); ?>
+        <a class="text-secondery" href="/articles/<?php echo e($article['id']); ?>">
+            <?php echo e($article["title"]); ?>
 
         </a>
     </li>
