@@ -7,6 +7,7 @@ use App\Http\Middleware\CheckRole;
 // Route::get('/home', function (){
 //     return "Home page";
 // })->name('home');
+
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 Route::get('/login', function (){
     return "login page";
