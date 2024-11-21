@@ -1,5 +1,3 @@
-
-
 <?php $__env->startSection('content'); ?>
     <h3>Title :<strong><?php echo e($article['title']); ?></strong> </h1>
     <p> Content :<strong><?php echo e($article['content']); ?></strong> </p>
