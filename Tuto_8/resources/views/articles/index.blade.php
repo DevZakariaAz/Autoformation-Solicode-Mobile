@@ -5,10 +5,9 @@
     @foreach ($articles as $article)
         <x-article-card :article="$article" />
     @endforeach
+
+    @include('partials.flash-message')
 @endsection
-
-@include('partials.flash-message')
-
 
 @section('sidebar')
     <h3>Catégories</h3>
