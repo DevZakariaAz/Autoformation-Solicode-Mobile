@@ -1,11 +1,11 @@
 <?php $__env->startSection('content'); ?>
     <h3>Title :<strong><?php echo e($article['title']); ?></strong> </h1>
     <p> Content :<strong><?php echo e($article['content']); ?></strong> </p>
-    <button>    <a href="/articles/<?php echo e($article['id']); ?>/edit">Modifier</a></button>
+        <a class="btn btn-success" href="/articles/<?php echo e($article['id']); ?>/edit">Modifier</a></button>
     <form action="/articles/<?php echo e($article['id']); ?>" method="POST" style="display:inline;">
         <?php echo csrf_field(); ?> 
         <?php echo method_field('DELETE'); ?> 
-        <button type="submit">Supprimer</button>
+        <button type="submit" class="btn btn-danger">Supprimer</button>
     </form>
 <?php $__env->stopSection(); ?>
 

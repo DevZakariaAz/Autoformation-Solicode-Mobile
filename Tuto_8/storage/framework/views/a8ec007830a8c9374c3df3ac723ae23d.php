@@ -1,6 +1,6 @@
 <?php if(session('success')): ?>
     <div class="alert alert-success">
-        <strong>Succès!</strong> <?php echo e(session('success')); ?>
+ <?php echo e(session('success')); ?>
 
     </div>
 <?php endif; ?>

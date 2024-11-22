@@ -4,14 +4,11 @@
         <?php echo csrf_field(); ?>
         <label for="title">Titre :</label>
         <input type="text" name="title" required>
-
         <label for="content">Contenu :</label>
-        <input type="text" name="content" required>
-
+        <input name="content"  type="text" required>
         <label for="categorie">Catégorie :</label>
         <input type="text" name="categorie" required>
-
-        <button type="submit">Créer</button>
+        <button type="submit" class="btn btn-success">Create</button>
     </form>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('sidebar'); ?>

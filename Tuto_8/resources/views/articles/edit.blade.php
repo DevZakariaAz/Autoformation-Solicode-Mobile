@@ -1,20 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3>Modifier Un Article</h3>
-    <form action="/articles/{{$article->id}}" method="POST">
-        @csrf
-        @method('PUT')
+    <div class="container mt-4">
+        <h3>Modifier Un Article</h3>
+        <form action="/articles/{{ $article->id }}" method="POST">
+            @csrf
+            @method('PUT')
 
-        <label for="title">Titre :</label>
-        <input type="text" name="title" value="{{ $article->title }}" required>
+            <!-- Title Field -->
+            <div class="mb-3">
+                <label for="title" class="form-label">Titre :</label>
+                <input type="text" name="title" value="{{ $article->title }}" class="form-control" required>
+            </div>
 
-        <label for="content">Contenu :</label>
-        <input type="text" name="content" value="{{ $article->content }}" required>
+            <!-- Content Field -->
+            <div class="mb-3">
+                <label for="content" class="form-label">Contenu :</label>
+                <textarea name="content" class="form-control" rows="4" required>{{ $article->content }}</textarea>
+            </div>
 
-        <label for="categorie">Catégorie :</label>
-        <input type="text" name="categorie" value="{{ $article->categorie }}" required>
+            <!-- Category Field -->
+            <div class="mb-3">
+                <label for="categorie" class="form-label">Catégorie :</label>
+                <input type="text" name="categorie" value="{{ $article->categorie }}" class="form-control" required>
+            </div>
 
-        <button type="submit">Modifier</button>
-    </form>
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-success">Modifier</button>
+        </form>
+    </div>
 @endsection
