@@ -30,3 +30,4 @@ use Illuminate\Support\Facades\Auth;
         return redirect('login')->with('Message','You have logged out!');
     }
 }
+
