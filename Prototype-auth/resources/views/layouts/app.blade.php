@@ -13,8 +13,10 @@
                 <h1 class="card-title text-info"> <i class="far fa-check-circle nav-icon"></i> Mon Blog</h1>
         </div>  
         <nav>
-            <a class="btn btn-info" href="/articles">Accueil</a>
-            <a class="btn btn-info" href="/articles/create/">Créer un Article</a>
+            <a class="btn btn-info" href="/dashboard/articles/">Accueil</a>
+            <a class="btn btn-info" href="/dashboard/articles/create/">Créer un Article</a>
+            <a href="/logout" class="btn btn-info text-danger">Logout</a>
+
         </nav>
     </header>
 
@@ -22,9 +24,6 @@
         <div class="content">
             @yield('content')
         </div>
-        <aside>
-            @yield('sidebar')
-        </aside>
     </main>
 
 <footer class="main-footer">

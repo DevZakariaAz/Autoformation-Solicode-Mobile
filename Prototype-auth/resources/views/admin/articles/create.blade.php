@@ -2,7 +2,7 @@
 
 @section('content')
     <h1> Créer un nouvel article</h1>
-    <form action="/articles" method="POST">
+    <form action="/dashboard/articles" method="POST">
         @csrf
         @if(isset($article))
             @method('PUT')

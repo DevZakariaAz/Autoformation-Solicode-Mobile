@@ -7,9 +7,14 @@
         <link rel="stylesheet" href="/css/boostrap.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>Welcome to the Dashboard</h1>
-        <a href="/logout" class="btn btn-danger mt-3">Logout</a>
-    </div>
+@extends('layouts.app')
+
+@section('content')
+    <h2>Liste des Articles</h2>
+    @foreach ($articles as $article)
+        <x-article-card :article="$article" />
+    @endforeach
+@endsection
+
 </body>
 </html>
