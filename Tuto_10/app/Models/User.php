@@ -38,6 +38,10 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
     protected function casts(): array
     {
         return [
